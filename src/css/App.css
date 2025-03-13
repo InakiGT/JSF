@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.bg-cua-orange {
+  background-color: var(--cua-orange);
+}
+
+.text-title {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
