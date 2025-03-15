@@ -7,16 +7,16 @@ type refType = {
 };
 
 function MainNav({ refHero }: refType) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [ isScrolled, setIsScrolled ] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 60);
+      setIsScrolled(window.scrollY > 60)
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <nav
@@ -54,7 +54,7 @@ function MainNav({ refHero }: refType) {
         <MenuHamburguer isScrolled={isScrolled} />
       </div>
     </nav>
-  );
+  )
 }
 
-export default MainNav;
+export default MainNav
