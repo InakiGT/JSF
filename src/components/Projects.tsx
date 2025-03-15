@@ -69,24 +69,10 @@ function Projects({ ref }: refType) {
       ],
     },
     {
-      title: 'Duelo por casillas: Migración a React',
-      img: 'EnProceso.png',
-      content: [
-        { content: 'En construcción...', link: '*' }
-      ],
-    },
-    {
       title: 'Ualendarización',
       img: 'EnProceso.png',
       content: [
         { content: 'Ualendarización es una aplicación web diseñada para gestionar recordatorios de clases y eventos importantes en la UAM. Los usuarios pueden registrarse, inscribirse en grupos de UEAs en las que están dados de alta, y recibir notificaciones automáticas de eventos creados por compañeros o profesores. Estos eventos incluyen horarios de clase, exámenes, entregas de tareas y otros eventos relevantes. La plataforma se sincroniza con Google Calendar, permitiendo que los eventos se agreguen automáticamente al calendario personal del usuario. Además, los administradores pueden gestionar grupos, profesores y un calendario escolar oficial, asegurando una organización eficiente y evitando la creación de eventos innecesarios.', link: '*' }
-      ],
-    },
-    {
-      title: 'Sistema para red de transporte en la ciudad',
-      img: 'EnProceso.png',
-      content: [
-        { content: 'En construcción...', link: '*' },
       ],
     },
     {
@@ -111,21 +97,7 @@ function Projects({ ref }: refType) {
       ],
     },
     {
-      title: 'Plataforma de aprendizaje interactivo para niños con TDAH y autismo',
-      img: 'EnProceso.png',
-      content: [
-        { content: 'Proporcionar un entorno educativo personalizado y adaptativo que responde a las necesidades y habilidades individuales de cada niño. Fomenta el desarrollo de habilidades cognitivas, emocionales y sociales a través de actividades y juegos interactivos. Incluye juegos educativos diseñados para desarrollar habilidades clave, presentados en diferentes niveles de dificultad. Además, ofrece un sistema de retroalimentación y recompensas que motiva a los niños a través de puntos y logros digitales. Para padres y educadores, la plataforma proporciona un panel de control que permite monitorear el progreso del niño en tiempo real, con indicadores clave y filtros de datos que facilitan un seguimiento detallado. Finalmente, el sistema también incluye notificaciones y recordatorios que aseguran la continuidad del proceso educativo, informando sobre actividades pendientes y recomendaciones de uso.', link: '*' }
-      ],
-    },
-    {
       title: 'Sistema para administrar conferencias',
-      img: 'EnProceso.png',
-      content: [
-        { content: 'En construcción...', link: '*' },
-      ],
-    },
-    {
-      title: 'Sistema para red de transporte en ciudad, una aplicación móvil',
       img: 'EnProceso.png',
       content: [
         { content: 'En construcción...', link: '*' },

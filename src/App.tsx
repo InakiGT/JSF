@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import Footer from './components/Footer'
-import HeroCarousel from './components/HeroCarousel'
 import MainNav from './components/MainNav'
 import './css/App.css'
 import Material from './components/Material'
@@ -15,7 +14,6 @@ function App() {
     <>
       <MainNav refHero={ section1Ref } />
 
-      <HeroCarousel ref={ section1Ref } materialRef={ section2Ref } projectRef={ section3Ref } />
 
       <Material ref={ section2Ref } />
 

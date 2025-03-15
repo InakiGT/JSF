@@ -37,7 +37,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
         </svg>
       </div>
 
-      <div className="flex max-h-120 overflow-y-auto gap-10 flex-wrap xl:flex-col items-center">
+      <div className="flex max-h-120 overflow-y-scroll gap-10 flex-wrap justify-center items-center">
         {
           content.map((item, index) => (
             <article key={ index } className="border-2 border-[#00000020] rounded-xl xl:max-w-8/17 max-h-fit">
@@ -48,7 +48,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
               <div className="border-t-2 border-[#00000020] bg-[#00000008] py-3 px-5">
                 <button
                   className="bg-[#555] cursor-pointer w-full text-white text-xl flex items-center justify-center py-2 px-30 rounded-xl border-2 border-[#444]"
-                  onClick={ () => console.log(item.link) }
+                  onClick={ () => window.open(item.link, '_blank') }
                 >Ir</button>
               </div>
             </article>

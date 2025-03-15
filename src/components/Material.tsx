@@ -14,10 +14,17 @@ function Material({ ref }: refType) {
       img: 'Curso1.png',
       title: 'Auto Aprendizaje de Aplicaciones Web y Android',
       content: [
-        { title: 'SEAWeb 1', content: 'Bienvenido al curso de desarrollo web donde aprenderás los fundamentos de aplicaciones web, desde HTML básico hasta el manejo de servidores Java con Servlets y JSP, incluyendo el acceso a bases de datos.', link: 'http://148.206.168.124:8080/seaweb/' },
-        { title: 'SEAWeb 2', content: 'JavaServer Faces (JSF) es un marco de desarrollo de aplicaciones web en Java que simplifica el proceso de creación de interfaces de usuario al separar la presentación de la lógica de la aplicación. Utiliza páginas Facelets que contienen componentes de alto nivel para interactuar con el servidor de manera independiente.', link: 'http://148.206.168.124:8080/seaweb/' },
         { title: 'Aprende React', content: 'Aprender a construir una aplicación web con React por primera vez es desafiante debido a la necesidad de integrar conocimientos previos y adquirir nuevos conocimientos relacionados con React y su entorno de programación. Los videos educativos y los manuales son opciones populares, pero este curso ofrece una alternativa autocontenido con enlaces para profundizar en temas específicos.', link: 'https://aprendereactapp.web.app/' },
         { title: 'SAAndroid ST', content: 'Este curso te llevará a través de un viaje de aprendizaje paso a paso para dominar el desarrollo de aplicaciones Android utilizando Android Studio de manera fácil y efectiva. Desde los conceptos básicos hasta técnicas avanzadas, explorarás cómo crear aplicaciones móviles impresionantes con una curva de aprendizaje suave y un enfoque práctico.', link: 'http://148.206.168.145:8080/SAAndroit_JSF/' },
+        { title: 'SEAWeb 1', content: 'Bienvenido al curso de desarrollo web donde aprenderás los fundamentos de aplicaciones web, desde HTML básico hasta el manejo de servidores Java con Servlets y JSP, incluyendo el acceso a bases de datos.', link: 'http://148.206.168.124:8080/seaweb/' },
+        { title: 'SEAWeb 2', content: 'JavaServer Faces (JSF) es un marco de desarrollo de aplicaciones web en Java que simplifica el proceso de creación de interfaces de usuario al separar la presentación de la lógica de la aplicación. Utiliza páginas Facelets que contienen componentes de alto nivel para interactuar con el servidor de manera independiente.', link: 'http://148.206.168.124:8080/seaweb/' },
+      ]
+    },
+    {
+      img: 'Curso6.png',
+      title: 'Página de los Diagramas de Transición entre Interfaces de Usuario (DTIU)',
+      content: [
+        { title: 'DTIU', content: 'Los Diagramas de Transición entre Interfaces de Usuario (DTIU) son una herramienta que sirve para modelar el flujo entre las diferentes interfaces que se le presentan al usuario en un sistema de software. En la Página del DTIU (UITD en inglés) encontrarás explicaciones, ejemplos, un editor especializado y más.', link: 'https://uitd-portal.firebaseapp.com/' },
       ]
     },
     {
@@ -37,13 +44,6 @@ function Material({ ref }: refType) {
       ]
     },
     {
-      img: 'Curso4.png',
-      title: 'Proyectos de Impacto Social',
-      content: [
-        { content: 'En este apartado hay diferentes tipos de proyectos destinados a contribuir a la sociedad.', link: 'http://148.206.168.145:8080/ProyectoImpactoSocialJSF/' },
-      ]
-    },
-    {
       img: 'Curso5.png',
       title: 'Aplicaciones de Ayuda al proceso de Enseñanza-Aprendizaje',
       content: [
@@ -51,10 +51,10 @@ function Material({ ref }: refType) {
       ]
     },
     {
-      img: 'Curso6.png',
-      title: 'Página de los Diagramas de Transición entre Interfaces de Usuario (DTIU)',
+      img: 'Curso4.png',
+      title: 'Proyectos de Impacto Social',
       content: [
-        { title: 'DTIU', content: 'Los Diagramas de Transición entre Interfaces de Usuario (DTIU) son una herramienta que sirve para modelar el flujo entre las diferentes interfaces que se le presentan al usuario en un sistema de software. En la Página del DTIU (UITD en inglés) encontrarás explicaciones, ejemplos, un editor especializado y más.', link: 'https://uitd-portal.firebaseapp.com/' },
+        { content: 'En este apartado hay diferentes tipos de proyectos destinados a contribuir a la sociedad.', link: 'http://148.206.168.145:8080/ProyectoImpactoSocialJSF/' },
       ]
     },
   ])
@@ -74,7 +74,7 @@ function Material({ ref }: refType) {
   }
 
   return (
-    <section  className="mt-20 border-b-2 border-[#e1e1e1]">
+    <section  className="border-b-2 border-[#e1e1e1] pt-60 md:pt-40">
       <Dialog
         title={ dialogContent.title }
         subtitle={ dialogContent.subtitle }
@@ -99,7 +99,7 @@ function Material({ ref }: refType) {
           </svg>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-5 lg:gap-y-15 mb-40">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 lg:gap-5 lg:gap-y-15 mb-40">
         {
           material.map((item, index) => (
             <article
