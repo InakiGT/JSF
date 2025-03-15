@@ -21,6 +21,13 @@ function Material({ ref }: refType) {
       ]
     },
     {
+      img: 'VAEP.png',
+      title: 'Sistema de Videojuegos de Apoyo a la Enseñanza para Profesores (VAEP)',
+      content: [
+        { title: 'Sistema de Videojuegos de Apoyo a la Enseñanza para Profesores (VAEP)', content: '', link: 'https://vaep-uamc.web.app/' }
+      ],
+    },
+    {
       img: 'Curso6.png',
       title: 'Página de los Diagramas de Transición entre Interfaces de Usuario (DTIU)',
       content: [
@@ -43,13 +50,13 @@ function Material({ ref }: refType) {
         { title: 'Libro de Texto', content: 'El libro Practicas con SIMetNum: Material de apoyo para la impartición de métodos numéricos, contiene una breve explicación de los métodos y prácticas diseñadas para ilustrar con SIMetNum propiedades clave de cada uno.', link: 'https://www.cua.uam.mx/404_override' },
       ]
     },
-    {
-      img: 'Curso5.png',
-      title: 'Aplicaciones de Ayuda al proceso de Enseñanza-Aprendizaje',
-      content: [
-        { content: 'En este apartado hay proyectos para generar dinámicas en clase que ayuden a reforzar el conocimiento.', link: 'http://148.206.168.145:8080/AplicacionesEnsenanzaAprendizaje/' },
-      ]
-    },
+    // {
+    //   img: 'Curso5.png',
+    //   title: 'Aplicaciones de Ayuda al proceso de Enseñanza-Aprendizaje',
+    //   content: [
+    //     { content: 'En este apartado hay proyectos para generar dinámicas en clase que ayuden a reforzar el conocimiento.', link: 'http://148.206.168.145:8080/AplicacionesEnsenanzaAprendizaje/' },
+    //   ]
+    // },
     {
       img: 'Curso4.png',
       title: 'Proyectos de Impacto Social',

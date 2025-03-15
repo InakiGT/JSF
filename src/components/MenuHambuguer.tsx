@@ -29,7 +29,6 @@ function MenuHamburguer({ isScrolled }: { isScrolled: boolean }) {
         </svg>
       </button>
 
-      {/* Ingeniería en Computación con cambios en scroll */}
       <a
         className={`text-title absolute left-0 bottom-[-60px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
           menu ? "scale-y-100" : "scale-y-0"
