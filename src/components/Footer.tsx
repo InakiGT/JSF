@@ -1,8 +1,8 @@
-import { RefObject } from "react";
+import { RefObject } from 'react'
 
 type refType = {
-  ref: RefObject<HTMLDivElement | null>;
-};
+  ref: RefObject<HTMLDivElement | null>
+}
 
 function Footer({ ref }: refType) {
   return (

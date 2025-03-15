@@ -7,17 +7,17 @@ import Projects from './components/Projects'
 import { scrollToRef } from './helpers/scroll'
 
 function App() {
-  const section1Ref = useRef<HTMLDivElement>(null);
-  const section2Ref = useRef<HTMLDivElement>(null);
-  const section3Ref = useRef<HTMLDivElement>(null);
-  const section4Ref = useRef<HTMLDivElement>(null);
+  const section1Ref = useRef<HTMLDivElement>(null)
+  const section2Ref = useRef<HTMLDivElement>(null)
+  const section3Ref = useRef<HTMLDivElement>(null)
+  const section4Ref = useRef<HTMLDivElement>(null)
 
   const [ isScrolled, setIsScrolled ] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY >= 500)
-    };
+    }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)

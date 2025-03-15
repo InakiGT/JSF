@@ -1,8 +1,8 @@
-import { useState } from "react";
-import "../css/Animations.css";
+import { useState } from 'react'
+import '../css/Animations.css'
 
 function MenuHamburguer({ isScrolled }: { isScrolled: boolean }) {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(false)
 
   return (
     <div className="flex flex-col justify-start items-start gap-4 xl:flex-row xl:gap-2.5">
@@ -42,7 +42,7 @@ function MenuHamburguer({ isScrolled }: { isScrolled: boolean }) {
         Ingeniería en computación
       </a>
     </div>
-  );
+  )
 }
 
-export default MenuHamburguer;
+export default MenuHamburguer

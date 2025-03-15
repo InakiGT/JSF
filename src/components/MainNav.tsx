@@ -1,10 +1,10 @@
-import { RefObject, useEffect, useState } from "react";
-import MenuHamburguer from "./MenuHambuguer";
-import { scrollToRef } from "../helpers/scroll";
+import { RefObject, useEffect, useState } from 'react'
+import MenuHamburguer from './MenuHambuguer'
+import { scrollToRef } from '../helpers/scroll'
 
 type refType = {
-  refHero: RefObject<HTMLDivElement | null>;
-};
+  refHero: RefObject<HTMLDivElement | null>
+}
 
 function MainNav({ refHero }: refType) {
   const [ isScrolled, setIsScrolled ] = useState(false)
@@ -12,7 +12,7 @@ function MainNav({ refHero }: refType) {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 60)
-    };
+    }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)

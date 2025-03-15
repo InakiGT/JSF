@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
-import { DialogType, kind, showDialogType } from '../types/Dialog';
-import Dialog from './Dialog';
+import { DialogType, kind, showDialogType } from '../types/Dialog'
+import Dialog from './Dialog'
 
 type refType = {
   ref: React.RefObject<HTMLDivElement | null>
