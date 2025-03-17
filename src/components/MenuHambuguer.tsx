@@ -30,12 +30,12 @@ function MenuHamburguer({ isScrolled }: { isScrolled: boolean }) {
       </button>
 
       <a
-        className={`text-title absolute left-0 bottom-[-60px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
+        className={`text-title py-5 w-full absolute left-0 bottom-[-40px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
           menu ? "scale-y-100" : "scale-y-0"
         } xl:scale-y-100 ${
           isScrolled
-            ? "bg-[#555555] w-[300px] rounded-md py-4"
-            : "bg-cua-orange w-[220px] rounded-lg py-5"
+            ? "bg-[#ff9900] lg:bg-[#555555] lg:w-[300px] lg:rounded-md lg:py-4"
+            : "bg-[#ff9900] lg:w-[220px] lg:rounded-lg"
         }`}
       >
         Ingeniería en computación

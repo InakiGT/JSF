@@ -21,12 +21,12 @@ function MainNav({ refHero }: refType) {
   return (
     <nav
       className={`bg-cua-orange fixed w-full z-50 transition-all duration-300 ease-in-out h-[178px] ${
-        isScrolled ? "md:h-[80px] shadow-md" : "md:h-[136px]"
+        isScrolled ? "lg:h-[80px] shadow-md" : "lg:h-[136px]"
       }`}
     >
       <div
         className={`py-6  max-w-full md:max-w-7xl mx-auto gap-2 p-4 w-full flex flex-col xl:flex-row md:justify-between xl:items-center relative transition-all duration-300 ease-in-out ${
-          isScrolled ? "md:py-3" : "md:py-6"
+          isScrolled ? "lg:py-3" : "lg:py-6"
         }`}
       >
         <div
@@ -51,7 +51,7 @@ function MainNav({ refHero }: refType) {
           </h1>
         </div>
 
-        <MenuHamburguer isScrolled={isScrolled} />
+        <MenuHamburguer isScrolled={ isScrolled } />
       </div>
     </nav>
   )
