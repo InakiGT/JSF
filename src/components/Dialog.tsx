@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import { DialogType } from '../types/Dialog'
 
 function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
+  const navigate = useNavigate()
+
   return (
     <dialog ref={ modalRef } className="w-100 max-h-200 bg-white text-[#212529] p-5 rounded-lg shadow-lg z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:bg-[rgba(0,0,0,0.4)] xl:max-h-min xl:w-300 xl:p-10">
       <div className="w-full flex justify-end">
@@ -48,7 +51,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
               <div className="border-t-2 border-[#00000020] bg-[#00000008] py-3 px-5">
                 <button
                   className="bg-[#555] cursor-pointer w-full text-white text-xl flex items-center justify-center py-2 px-30 rounded-xl border-2 border-[#444]"
-                  onClick={ () => window.open(item.link, '_blank') }
+                  onClick={ () => item.link.startsWith('http') ? window.open(item.link, '_blank') : navigate(item.link) }
                 >Ir</button>
               </div>
             </article>

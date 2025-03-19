@@ -50,18 +50,11 @@ function Material({ ref }: refType) {
         { title: 'Libro de Texto', content: 'El libro Practicas con SIMetNum: Material de apoyo para la impartición de métodos numéricos, contiene una breve explicación de los métodos y prácticas diseñadas para ilustrar con SIMetNum propiedades clave de cada uno.', link: 'https://www.cua.uam.mx/404_override' },
       ]
     },
-    // {
-    //   img: 'Curso5.png',
-    //   title: 'Aplicaciones de Ayuda al proceso de Enseñanza-Aprendizaje',
-    //   content: [
-    //     { content: 'En este apartado hay proyectos para generar dinámicas en clase que ayuden a reforzar el conocimiento.', link: 'http://148.206.168.145:8080/AplicacionesEnsenanzaAprendizaje/' },
-    //   ]
-    // },
     {
       img: 'Curso4.png',
       title: 'Proyectos de Impacto Social',
       content: [
-        { content: 'En este apartado hay diferentes tipos de proyectos destinados a contribuir a la sociedad.', link: 'http://148.206.168.145:8080/ProyectoImpactoSocialJSF/' },
+        { content: 'En este apartado hay diferentes tipos de proyectos destinados a contribuir a la sociedad.', link: '/ProyectoImpactoSocialJSF/' },
       ]
     },
   ])
