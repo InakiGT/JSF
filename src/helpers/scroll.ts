@@ -7,7 +7,7 @@ function scrollToRef(ref: RefObject<HTMLDivElement | null>) {
 
   window.scrollTo({
     top: offsetPosition,
-    behavior: "smooth",
+    behavior: 'smooth',
   })
 }
 

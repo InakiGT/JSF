@@ -1,10 +1,9 @@
-import { RefObject, useState } from 'react'
+import { useState } from 'react'
 import '../css/Animations.css'
-import { scrollToRef } from '../helpers/scroll'
+import { Link } from 'react-router-dom'
 
-function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObject<HTMLDivElement | null> }) {
+function PISMenuHamburguer() {
   const [menu, setMenu] = useState(false)
-  console.log(ref)
 
   return (
     <div className="flex flex-col justify-start items-start gap-4 xl:flex-row xl:gap-2.5">
@@ -31,20 +30,18 @@ function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObje
         </svg>
       </button>
 
-      <span
-        className={`text-title py-5 w-full absolute left-0 bottom-[-40px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
+      <Link
+        className={ `text-title py-5 w-full absolute left-0 bottom-[-40px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
           menu ? "scale-y-100" : "scale-y-0"
-        } xl:scale-y-100 ${
-          isScrolled
-            ? "bg-[#ff9900] lg:bg-[#555555] lg:w-[300px] lg:rounded-md lg:py-4"
-            : "bg-[#ff9900] lg:w-[220px] lg:rounded-lg"
-        }`}
-        onClick={ () => scrollToRef(ref) }
+        } xl:scale-y-100 bg-cua-orange` }
+        to="/"
       >
-        Ingeniería en computación
-      </span>
+        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+        </svg>
+      </Link>
     </div>
   )
 }
 
-export default MenuHamburguer
+export default PISMenuHamburguer

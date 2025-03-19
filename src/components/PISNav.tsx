@@ -1,12 +1,7 @@
-import { RefObject, useEffect, useState } from 'react'
-import MenuHamburguer from './MenuHambuguer'
-import { scrollToRef } from '../helpers/scroll'
+import { useEffect, useState } from 'react'
+import PISMenuHamburguer from './PISMenuHamburguer'
 
-type refType = {
-  ref: RefObject<HTMLDivElement | null>
-}
-
-function MainNav({ ref }: refType) {
+function PISNav() {
   const [ isScrolled, setIsScrolled ] = useState(false)
 
   useEffect(() => {
@@ -20,7 +15,7 @@ function MainNav({ ref }: refType) {
 
   return (
     <nav
-      className={`bg-cua-orange fixed w-full z-50 transition-all duration-300 ease-in-out h-[178px] ${
+      className={`bg-cua-orange flex flex-col justify-center items-center fixed w-full z-50 transition-all duration-300 ease-in-out h-[158px] ${
         isScrolled ? "lg:h-[80px] shadow-md" : "lg:h-[136px]"
       }`}
     >
@@ -31,15 +26,7 @@ function MainNav({ ref }: refType) {
       >
         <div
           className="flex flex-col gap-1 md:items-center md:flex-row md:gap-2.5"
-          onClick={() => scrollToRef(ref)}
         >
-          <img
-            src="EmblemaUAM2.png"
-            alt="uam_logo"
-            className={`cursor-pointer transition-all duration-300 ease-in-out w-[90px]
-            }`}
-          />
-
           <h1
             className={`uppercase cursor-pointer text-white text-title transition-all duration-300 ease-in-out ${
               isScrolled ? "text-xl xl:text-xl" : "text-xl xl:text-[28px]"
@@ -51,10 +38,10 @@ function MainNav({ ref }: refType) {
           </h1>
         </div>
 
-        <MenuHamburguer isScrolled={ isScrolled } ref={ ref } />
+        <PISMenuHamburguer />
       </div>
     </nav>
   )
 }
 
-export default MainNav
+export default PISNav
