@@ -46,12 +46,14 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
             <article key={ index } className="border-2 border-[#00000020] rounded-xl xl:max-w-8/17 max-h-fit">
               <div className="p-6">
                 { item.title && (<h4 className="text-title text-2xl mb-5">{ item.title }</h4>) }
+                { item.creator && (<h4 className="text-title text-xl mb-5">{ item.creator }</h4>) }
+                { item.technologies && (<h4 className="text-title text-xs mb-5">{ item.technologies }</h4>) }
                 <p className='text-center'>{ item.content }</p>
                 </div>
               <div className="border-t-2 border-[#00000020] bg-[#00000008] py-3 px-5">
                 <button
                   className="bg-[#555] cursor-pointer w-full text-white text-xl flex items-center justify-center py-2 px-30 rounded-xl border-2 border-[#444]"
-                  onClick={ () => item.link.startsWith('http') ? window.open(item.link, '_blank') : navigate(item.link) }
+                  onClick={ () => item.link?.startsWith('http') ? window.open(item.link, '_blank') : navigate(item.link ? item.link : '#') }
                 >Ir</button>
               </div>
             </article>

@@ -5,8 +5,10 @@ export enum kind {
 
 export type ContentType = {
   title?: string,
-  content: string,
-  link: string,
+  creator?: string,
+  technologies?: string,
+  content?: string,
+  link?: string,
 }
 
 export type DialogType = {

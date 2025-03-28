@@ -1,5 +1,4 @@
 import { RefObject, useState } from 'react'
-import '../css/Animations.css'
 import { scrollToRef } from '../helpers/scroll'
 
 function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObject<HTMLDivElement | null> }) {

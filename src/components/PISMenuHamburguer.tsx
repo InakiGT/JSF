@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import '../css/Animations.css'
 import { Link } from 'react-router-dom'
 
 function PISMenuHamburguer() {
