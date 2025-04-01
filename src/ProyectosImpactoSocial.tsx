@@ -1,15 +1,12 @@
 import { useRef, useState } from 'react'
 import PISNav from './components/PISNav'
 import Footer from './components/Footer'
+import pis from './utils/ProjectsImpactoSocial'
 
 function ProyectosImpactoSocial() {
   const section1Ref = useRef<HTMLDivElement>(null)
 
-  const [ projects ] = useState([
-    { title: 'Viaje sin tránsito', content: 'VST pretende ayudar a compartir automóviles entre los alumnos de la UAM Cuajimalpa', link: '/VST'  },
-    { title: 'RouteSmart', content: 'En construcción...', link: '/VST'  },
-    { title: 'Plataforma de aprendizaje interactivo para niños con TDAH y autismo', content: 'Proporcionar un entorno educativo personalizado y adaptativo que responde a las necesidades y habilidades individuales de cada niño', link: '/VST'  },
-  ])
+  const [ projects ] = useState([ ...pis ])
 
   return (
     <>

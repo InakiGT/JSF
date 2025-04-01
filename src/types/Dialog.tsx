@@ -9,6 +9,7 @@ export type ContentType = {
   technologies?: string,
   content?: string,
   link?: string,
+  perks?: Perk[]
 }
 
 export type DialogType = {
@@ -24,4 +25,10 @@ export type showDialogType = {
   title: string
   subtitle?: string
   content: ContentType[]
+  img?: string,
+}
+
+export type Perk = {
+  title: string,
+  desc: string,
 }
