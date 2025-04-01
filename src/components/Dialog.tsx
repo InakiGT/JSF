@@ -5,7 +5,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
   const navigate = useNavigate()
 
   return (
-    <dialog ref={ modalRef } className="w-100 max-h-200 bg-white text-[#212529] p-5 rounded-lg shadow-lg z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:bg-[rgba(0,0,0,0.4)] xl:max-h-min xl:w-300 xl:p-10">
+    <dialog ref={ modalRef } className="w-100 max-h-[98vh] bg-white text-[#212529] p-5 rounded-lg shadow-lg z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:bg-[rgba(0,0,0,0.4)] xl:max-h-[95vh] xl:w-350 xl:p-10">
       <div className="w-full flex justify-end">
         <svg
           className="w-10 h-10 text-[#ff9900] cursor-pointer hover:text-[#ff9900dd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
@@ -16,9 +16,9 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
       </div>
 
 
-      <div className="w-4/7 mx-auto">
+      <div className="w-5/6 l:w-4/7 mx-auto">
         <h3 className="text-title uppercase text-[#6c757d] text-2xl">{ kind === 'project' ? 'Proyecto terminal' : '' }</h3>
-        <h2 className="text-title uppercase text-[#2c3e50] text-4xl xl:text-5xl">{ title }</h2>
+        <h2 className="text-title uppercase text-[#2c3e50] text-3xl xl:text-5xl">{ title }</h2>
         <h4 className="text-title text-2xl">{ subtitle }</h4>
       </div>
 
@@ -46,8 +46,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
             <article key={ index } className="border-2 border-[#00000020] rounded-xl xl:max-w-8/17 max-h-fit">
               <div className="p-6">
                 { item.title && (<h4 className="text-title text-2xl mb-5">{ item.title }</h4>) }
-                { item.creator && (<h4 className="text-title text-xl mb-5">{ item.creator }</h4>) }
-                { item.technologies && (<h4 className="text-title text-xs mb-5">{ item.technologies }</h4>) }
+                { item.technologies && (<h4 className="text-title text-s mb-5">Stack: { item.technologies }</h4>) }
                 <p className='text-center'>{ item.content }</p>
                 </div>
               <div className="border-t-2 border-[#00000020] bg-[#00000008] py-3 px-5">

@@ -9,7 +9,7 @@ const projects: showDialogType[] = [
         content: "Automatiza la organización de equipos de fútbol, tiene dos tipos de usuario: entrenador y jugador. El entrenador puede gestionar los equipos, los calendarios de partidos y entrenamientos y los jugadores. Mientras que el jugador puede consultar los calendarios organizados por el entrenador y recibir las notificaciones de los próximos eventos.",
         creator: "Daniel Nieto Dominguez",
         technologies: "React",
-        link: "https://gestion-futbol-c1514.web.app"
+        link: "https://gestionfutbol-c1514.web.app"
       }
     ]
   },
@@ -19,7 +19,7 @@ const projects: showDialogType[] = [
       {
         content: "MaxcomGames es una plataforma en línea para la compra de videojuegos que combina seguridad y simplicidad. Permite registrarse de forma tradicional o a través de Google y Facebook, garantizando accesibilidad. La interfaz intuitiva y el catálogo optimizado, con filtros por género y plataforma, facilitan la búsqueda y elección de productos, complementados con descripciones detalladas, imágenes y reseñas de usuarios. El proceso de compra es fluido: se gestionan carritos, se aceptan múltiples métodos de pago y se emiten facturas electrónicas, mientras que la entrega inmediata de claves digitales y notificaciones aseguran el acceso oportuno al contenido. Además, políticas claras de devolución y reembolso refuerzan una experiencia confiable y sin complicaciones.",
         creator: "Max Uriel Sánchez Díaz",
-        technologies: "No especificado",
+        technologies: "Mongodb, Express y Node.js",
         link: ""
       }
     ]
@@ -30,7 +30,7 @@ const projects: showDialogType[] = [
       {
         content: "Para gestionar recordatorios de clases y eventos importantes en la UAM. Los usuarios pueden registrarse, inscribirse en grupos de UEAs en las que están dados de alta, y recibir notificaciones automáticas de eventos creados por compañeros o profesores. Estos eventos incluyen horarios de clase, exámenes, entregas de tareas y otros eventos relevantes. La plataforma se sincroniza con Google Calendar, permitiendo que los eventos se agreguen automáticamente al calendario personal del usuario. Además, los administradores pueden gestionar grupos, profesores y un calendario escolar oficial, asegurando una organización eficiente y evitando la creación de eventos innecesarios.",
         creator: "Bryan Michelle García Díaz",
-        technologies: "React",
+        technologies: "React y Firebase",
         link: ""
       }
     ]
@@ -58,12 +58,12 @@ const projects: showDialogType[] = [
     ]
   },
   {
-    title: "Plataforma Integral para la gestión y análisis en tiempo real de ligas y partidos de fútbol",
+    title: "FootBallMaster",
     content: [
       {
         content: "Es un sistema gestor de torneos de fútbol que permite la creación y administración de torneos de manera eficiente. Los partidos se generan aleatoriamente dentro de las ligas o torneos, y los creadores de partidos son responsables de subir la información de los resultados, así como de asignar la fecha y la hora de los encuentros. Los usuarios normales pueden acceder a la aplicación para consultar los resultados actualizados de cada partido, ver los próximos encuentros y obtener información detallada sobre los torneos. La aplicación móvil garantiza una experiencia simple e intuitiva para todos los usuarios, con acceso a estadísticas en tiempo real y una interfaz amigable para la gestión completa del torneo.",
         creator: "Jessica Lara Cruz",
-        technologies: "React Native y Node.js",
+        technologies: "React y Firebase",
         link: ""
       }
     ]
@@ -73,7 +73,7 @@ const projects: showDialogType[] = [
     subtitle: "Control de jornadas y roles de empleados, automatización de inventario y manejo de órdenes de servicio.",
     content: [
       {
-        content: "Es una plataforma web integral que moderniza los procesos operativos de la empresa al centralizar y automatizar tres áreas principales:Gestión del personal: Permite registrar y validar jornadas laborales (incluyendo horarios de entrada, salida y comidas) y asegura el acceso mediante autenticación según roles. Control de inventarios: Facilita la creación, edición y consulta en tiempo real de productos por sucursal, actualizando el inventario automáticamente mediante escaneo de códigos QR y gestionando pedidos entre la central y las sucursales. Manejo de órdenes de servicio: Incorpora formularios dinámicos para distintos tipos de venta, genera documentos en PDF automáticamente y mantiene un historial de órdenes para facilitar el seguimiento.",
+        content: "Es una plataforma web integral que moderniza los procesos operativos de la empresa al centralizar y automatizar tres áreas principales:Gestión del personal: Permite registrar y validar jornadas laborales (incluyendo horarios de entrada, salida y comidas) y asegura el acceso mediante autenticación según roles. Control de inventarios: Facilita la creación, edición y consulta en tiempo real de productos por sucursal, actualizando el inventario automáticamente y gestionando pedidos entre la central y las sucursales. Manejo de órdenes de servicio: Incorpora formularios dinámicos para distintos tipos de venta, genera documentos en PDF automáticamente y mantiene un historial de órdenes para facilitar el seguimiento.",
         creator: "Brandon Chavez Salaverria",
         technologies: "Django y Postgre, se entrega en Firebase)"
       }
@@ -94,7 +94,9 @@ const projects: showDialogType[] = [
     title: 'Medición de la eficiencia de los entrenamientos de hipertrofia',
     content: [
       {
-        creator: 'Arturo Reyes Paniagua'
+        creator: 'Arturo Reyes Paniagua',
+        content: 'ControlFit es un sistema web diseñado para monitorear y ayudar a mejorar el estado físico de sus usuarios. Permite registrar datos personales y medidas corporales, calcular el porcentaje de grasa mediante fórmulas específicas para hombres y mujeres, y gestionar el acceso con autenticación automática y recuperación de contraseña. Además, el sistema facilita la visualización del progreso en medidas y ejercicios a través de gráficos personalizados. Entre sus funcionalidades destaca la creación y personalización de rutinas de entrenamiento, las cuales se ajustan automáticamente mediante el método de sobrecarga progresiva según el rendimiento del usuario, permitiendo así una evaluación continua del progreso físico.',
+        technologies: 'React, node.js, express y firebase',
       },
     ],
   },
@@ -114,7 +116,8 @@ const projects: showDialogType[] = [
       {
         creator: 'Miguel Etzel García Delgado',
         content: 'Permite que los clientes de un entrenador deportivo y un médico especializado en medicina del deporte, tengan un seguimiento de sus planes alimenticios, rutinas de ejercicio y citas médicas y/o deportivas. En la parte medica se agregan a la plataforma peso, grasa corporal, la cantidad de ejercicio, etc. También se pueden se agendar citas. En la parte de la rutina física el especialista asigna una lista de ejercicios y el cliente podrá visualizarlos para hacerlos como corresponda.',
-        link: 'https://authentication-app-ec68a.web.app/'
+        link: 'https://authentication-app-ec68a.web.app/',
+        technologies: 'Vue.js y Pinia',
       }
     ],
   },
@@ -125,7 +128,7 @@ const projects: showDialogType[] = [
         creator: 'Eduardo Mauricio Granados Hernández',
         content: 'Los clientes puedan hacer sus compras en la tienda con paypal.  El usuario “administrador” puede gestionar las modificaciones a los productos de la tienda, mientras que el “cliente” solo puede gestionar sus compras.',
         link: 'https://storemusic-f0b4b.web.app/',
-        technologies: 'React'
+        technologies: 'React y firebase'
       }
     ]
   },
@@ -135,6 +138,7 @@ const projects: showDialogType[] = [
       {
         creator: ' Ricardo Huicochea Pérez',
         content: '¿Quieres comprar o vender en un ambiente en el que puedas confiar como la comunidad UAM-Cuajimalpa? MercaUAMC es el lugar indicado para ti. Aquí puedes comprar y vender productos exclusivamente entre alumnos de la comunidad universitaria de la UAM-C. Publica lo que quieres vender y consulta lo que está en oferta. Puedes agendar una cita con el vendedor para comprar los productos que te interesen con la comodidad de adquirirlo en tu escuela. También puedes hacer una pre-orden de un producto que se encuentre agotado y ser informado cuando esté nuevamente disponible.',
+        technologies: 'JavaServer Faces',
       }
     ]
   },
@@ -143,8 +147,9 @@ const projects: showDialogType[] = [
    content: [
       {
         content: 'Facilita la gestión de proyectos y la organización de tareas, orientado a satisfacer las necesidades de un amplio espectro de usuarios, más allá del ámbito académico. Permite a individuos y equipos, ya sean estudiantes, profesionales o entusiastas de cualquier sector, estructurar, planificar y monitorear eficazmente las actividades necesarias para llevar a cabo sus proyectos y tareas.',
-        technologies: 'React, Mongo, Express y Node',
+        technologies: '(Backend: MongoDB, Express y Node.js, Frontend: Tailwind CSS, Headless UI y React)',
         creator: 'Francisco Ortega García',
+        link: 'https://app-mern-frontend.vercel.app/'
       }
    ]
   },
@@ -156,6 +161,7 @@ const projects: showDialogType[] = [
         content: 'Con MyQuiz, los grupos de estudio tienen una herramienta que les permite estudiar a distancia y de forma asíncrona. La retroalimentación que proporcionan y reciben los miembros del grupo refuerza o corrige los conocimientos del tema de estudio.',
         technologies: 'php',
         creator: 'Alan Kevin Bastida Cervantes',
+        link: 'http://148.206.168.174/myquiz/views/loginRegistro.html ',
       }
     ]
   },

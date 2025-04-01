@@ -75,16 +75,17 @@ function Projects({ ref }: refType) {
           </svg>
         </button>
         <ul
-          className="overflow-x-scroll flex gap-5 px-6 scrollbar-hide"
+          className="overflow-x-scroll flex gap-5 px-6"
           ref={scrollContainerRef}
         >
           {projects.map((project, index) => (
             <li
               key={index}
-              className="shadow rounded-2xl w-[250px] lg:w-[300px] cursor-pointer flex items-center bg-[#F5F5F5] p-10"
+              className="shadow rounded-2xl min-w-[300px] cursor-pointer flex items-center bg-[#F5F5F5] p-10 flex-col justify-center"
               onClick={() => showDialog({ title: project.title, subtitle: project.subtitle, content: project.content })}
             >
-              <p className="text-title text-center text-[#1A252F] text-xl">{project.title}</p>
+              <p className="text-center text-xl">Autor: { project.content[0].creator }</p>
+              <p className="text-title text-center text-[#1A252F] text-2xl">{project.title}</p>
             </li>
           ))}
         </ul>

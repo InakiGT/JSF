@@ -3,7 +3,6 @@ import { scrollToRef } from '../helpers/scroll'
 
 function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObject<HTMLDivElement | null> }) {
   const [menu, setMenu] = useState(false)
-  console.log(ref)
 
   return (
     <div className="flex flex-col justify-start items-start gap-4 xl:flex-row xl:gap-2.5">
