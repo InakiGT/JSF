@@ -2,15 +2,40 @@ import { useRef, useState } from 'react'
 import PISNav from './components/PISNav'
 import Footer from './components/Footer'
 import pis from './utils/ProjectsImpactoSocial'
+import Dialog from './components/Dialog'
+import { DialogType, showDialogType } from './types/Dialog'
 
 function ProyectosImpactoSocial() {
   const section1Ref = useRef<HTMLDivElement>(null)
+  const modalRef = useRef<HTMLDialogElement>(null)
 
   const [ projects ] = useState([ ...pis ])
+
+    const [ dialogContent, setDialogContent ] = useState<DialogType>({ title: '', subtitle: '', content: [], modalRef })
+
+  const showDialog = ({ title, subtitle, content }: showDialogType) => {
+      setDialogContent({
+        ...dialogContent,
+        title,
+        subtitle,
+        content,
+      })
+
+      modalRef.current?.showModal()
+  }
+
 
   return (
     <>
       <PISNav />
+
+      <Dialog
+        title={ dialogContent.title }
+        subtitle={ dialogContent.subtitle }
+        content={ dialogContent.content }
+        kind={ dialogContent.kind }
+        modalRef={ modalRef }
+      />
 
       <section className="pt-60 md:pt-40 max-w-6xl mx-auto min-h-[80vh]">
         <h2 className="text-title text-4xl mx-auto w-80 uppercase leading-[36px] lg:w-full">Proyectos</h2>
@@ -35,10 +60,10 @@ function ProyectosImpactoSocial() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="rounded-xl flex flex-col items-center justify-center bg-[#f5f5f5] w-full max-w-[400px] px-10 text-[#1a252f] md:px-20 md:py-10 shadow cursor-pointer h-full transition-transform transform hover:scale-105"
+              className="px-10 text-[#1a252f] cursor-pointer h-full transition-transform transform hover:scale-105"
+              onClick={() => showDialog({ title: project.title, subtitle: project.subtitle, content: project.content })}
             >
-              <h3 className="text-title text-4xl mb-5">{project.title}</h3>
-              <p>{project.content}</p>
+              <img className="rounded-2xl shadow w-[400px]" src={ project.img } alt={ project.title } />
             </article>
           ))}
         </div>

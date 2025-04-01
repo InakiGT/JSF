@@ -16,7 +16,7 @@ export type DialogType = {
   title: string
   subtitle?: string
   content: ContentType[] | never
-  kind: kind
+  kind?: kind
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   modalRef: any
 }

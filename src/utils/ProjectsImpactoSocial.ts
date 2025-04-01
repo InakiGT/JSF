@@ -1,6 +1,6 @@
 import { showDialogType } from "../types/Dialog"
 
-const projects: showDialogType[] = [
+const pis: showDialogType[] = [
   {
     title: "SmartTransport",
     subtitle: "¿Dónde está mi transporte? ¿Dónde está mi pasaje?",
@@ -21,7 +21,7 @@ const projects: showDialogType[] = [
   {
     title: "Viaja Sin Tránsito",
     subtitle: "",
-    img: "/SmartTransport.png",
+    img: "/ViajaSinTransito.png",
     content: [
       {
         content: "Fomenta el uso compartido de automóvil entre los estudiantes de la UAM-C. Permite a los conductores crear itinerarios de sus rutas y darlos a conocer para poder así compartir los gastos de gasolina con los pasajeros que acepta. Por otra parte, los pasajeros sin auto viajan de forma más segura y cómoda en vehículos que se dirigen a la universidad. Los alumnos con coche y rutas similares, pueden turnarse para viajar en un solo auto. Con roles específicos, el sistema facilita la gestión de reservas. Para generar un ambiente de confianza los usuarios proporcionan su tira de materias del trimestre en el que el itinerario esté activo.",
@@ -55,7 +55,7 @@ const projects: showDialogType[] = [
   {
     title: "Hector Raciel Ledesma Vázquez",
     subtitle: "",
-    img: "/PequeñosGenios.png",
+    img: "/PequenosGenios.png",
     content: [
       {
         content: "Proporciona un entorno educativo personalizado y adaptativo que responde a las necesidades y habilidades individuales de cada niño. Fomenta el desarrollo de habilidades cognitivas, emocionales y sociales a través de actividades y juegos interactivos. Incluye juegos educativos diseñados para desarrollar habilidades clave, presentados en diferentes niveles de dificultad. Además, ofrece un sistema de retroalimentación y recompensas que motiva a los niños a través de puntos y logros digitales. Para padres y educadores, la plataforma proporciona un panel de control que permite monitorear el progreso del niño en tiempo real, con indicadores clave y filtros de datos que facilitan un seguimiento detallado. Finalmente, el sistema también incluye notificaciones y recordatorios que aseguran la continuidad del proceso educativo, informando sobre actividades pendientes y recomendaciones de uso.",
@@ -67,4 +67,4 @@ const projects: showDialogType[] = [
   },
 ]
 
-export default projects
+export default pis
