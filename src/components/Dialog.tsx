@@ -5,7 +5,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
   const navigate = useNavigate()
 
   return (
-    <dialog ref={ modalRef } className="w-100 max-h-[98vh] bg-white text-[#212529] p-5 rounded-lg shadow-lg z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:bg-[rgba(0,0,0,0.4)] xl:max-h-[95vh] xl:w-350 xl:p-10">
+    <dialog ref={ modalRef } className="w-100 max-h-[98vh] bg-white text-[#212529] p-5 rounded-lg shadow-lg z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:bg-[rgba(0,0,0,0.4)] xl:max-h-[95vh] md:w-350 xl:p-10">
       <div className="w-full flex justify-end">
         <svg
           className="w-10 h-10 text-[#ff9900] cursor-pointer hover:text-[#ff9900dd]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
