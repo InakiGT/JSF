@@ -1,15 +1,18 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import PISNav from './components/PISNav'
 import Footer from './components/Footer'
-import pis from './utils/ProjectsImpactoSocial'
 import Dialog from './components/Dialog'
-import { DialogType, showDialogType } from './types/Dialog'
+import { ContentType, DialogType, showDialogType } from './types/Dialog'
+import Api from './utils/api'
+import { Project } from './types/Project'
 
 function ProyectosImpactoSocial() {
   const section1Ref = useRef<HTMLDivElement>(null)
   const modalRef = useRef<HTMLDialogElement>(null)
 
-  const [ projects ] = useState([ ...pis ])
+  const api = new Api(import.meta.env.VITE_API_URI)
+
+  const [ projects, setProjects ] = useState<Project[]>()
 
     const [ dialogContent, setDialogContent ] = useState<DialogType>({ title: '', subtitle: '', content: [], modalRef })
 
@@ -24,6 +27,17 @@ function ProyectosImpactoSocial() {
       modalRef.current?.showModal()
   }
 
+  useEffect(() => {
+    async function fetchData() {
+      const response = await api.get('/impacto')
+      const data = await response.json()
+
+      setProjects(data.data)
+    }
+
+    fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
@@ -57,15 +71,20 @@ function ProyectosImpactoSocial() {
           style={{ gridAutoRows: "1fr" }}
           ref={section1Ref}
         >
-          {projects.map((project, index) => (
-            <article
-              key={index}
-              className="px-10 text-[#1a252f] cursor-pointer h-full transition-transform transform hover:scale-105"
-              onClick={() => showDialog({ title: project.title, subtitle: project.subtitle, content: project.content })}
-            >
-              <img className="rounded-2xl shadow w-[400px]" src={ project.img } alt={ project.title } />
-            </article>
-          ))}
+          {projects && projects.map((project, index) => {
+              const { title = '', subtitle = '', content, img = '' } = project
+              const typedContent = content as ContentType[]
+
+            return (
+              <article
+                key={index}
+                className="px-10 text-[#1a252f] cursor-pointer h-full transition-transform transform hover:scale-105"
+                onClick={() => showDialog({ title, subtitle, content: typedContent })}
+              >
+                <img className="rounded-2xl shadow w-[400px]" src={ img } alt={ title } />
+              </article>
+            )
+          })}
         </div>
       </section>
 

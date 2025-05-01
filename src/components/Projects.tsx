@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Dialog from './Dialog'
-import { DialogType, kind, showDialogType } from '../types/Dialog'
-import BaseProjects from '../utils/Projects'
+import { ContentType, DialogType, kind, showDialogType } from '../types/Dialog'
+import Api from '../utils/api'
+import { Project } from '../types/Project'
 
 type refType = {
   ref: React.RefObject<HTMLDivElement | null>
@@ -12,7 +13,9 @@ function Projects({ ref }: refType) {
   const modalRef = useRef<HTMLDialogElement>(null)
   const scrollContainerRef = useRef<HTMLUListElement>(null)
 
-  const [ projects ] = useState([ ...BaseProjects ].reverse())
+  const api = new Api(import.meta.env.VITE_API_URI)
+
+  const [ projects, setProjects ] = useState<Project[]>([])
   const [ dialogContent, setDialogContent ] = useState<DialogType>({ title: '', subtitle: '', content: [], kind: kind.MATERIAL, modalRef })
 
   const showDialog = ({ title, subtitle, content }: showDialogType) => {
@@ -39,6 +42,17 @@ function Projects({ ref }: refType) {
     }
   }
 
+  useEffect(() => {
+    async function fetchData() {
+      const response = await api.get('/pt')
+      const data = await response.json()
+
+      setProjects([ ...data.data ])
+    }
+
+    fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <section ref={ ref } className="mt-20 max-w-6xl mx-auto">
@@ -78,16 +92,22 @@ function Projects({ ref }: refType) {
           className="overflow-x-scroll flex gap-5 px-6"
           ref={scrollContainerRef}
         >
-          {projects.map((project, index) => (
+          {projects && projects.map((project, index) => {
+
+            const { title = '', subtitle = '', content } = project
+            const typedContent = content as ContentType[]
+
+            return (
             <li
               key={index}
               className="shadow rounded-2xl min-w-[300px] cursor-pointer flex items-center bg-[#F5F5F5] p-10 flex-col justify-center"
-              onClick={() => showDialog({ title: project.title, subtitle: project.subtitle, content: project.content })}
+              onClick={() => showDialog({ title, subtitle, content: typedContent })}
             >
-              <p className="text-center text-xl">Autor: { project.content[0].creator }</p>
-              <p className="text-title text-center text-[#1A252F] text-2xl">{project.title}</p>
+              <p className="text-center text-xl">Autor: { typedContent[0].creator }</p>
+              <p className="text-title text-center text-[#1A252F] text-2xl">{ project.title }</p>
             </li>
-          ))}
+            )
+          })}
         </ul>
         <button
           className="bg-cua-orange rounded-full absolute z-10 right-0 top-1/2 -translate-y-1/2 p-2 cursor-pointer"
