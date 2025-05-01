@@ -15,4 +15,10 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+  <script>
+    if (typeof ServiceWorkerRegistration === 'undefined') {
+      window.ServiceWorkerRegistration = function() {};
+    }
+  </script>
+
 </html>
