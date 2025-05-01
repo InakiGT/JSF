@@ -8,7 +8,7 @@ export default function PISPanel() {
 
   const [ pis, setPis ] = useState<Project[]>([])
   const [ error, setError ] = useState('')
-  const [ id, setId ] = useState('')
+  const [ , setId ] = useState('')
   const [ option, setOption ] = useState('show')
 
   useEffect(() => {
