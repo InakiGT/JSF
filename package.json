@@ -12,7 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.10",
     "audit": "^0.0.6",
-    "carruzilla": "file:../CarruZilla",
+    "cookie-store": "^4.0.0-next.4",
     "fix": "^0.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
