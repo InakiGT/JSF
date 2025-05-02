@@ -22,7 +22,7 @@ class Api {
 
     try {
       const response = await fetch(this.currentUrl, {
-        headers: headers(token),
+        headers: headers(token ? token : { value: '' }),
       })
 
       return response
@@ -77,7 +77,6 @@ class Api {
         method: 'DELETE',
         headers: headers(token)
       })
-
       return response
     } catch (err) {
       console.error(err)
