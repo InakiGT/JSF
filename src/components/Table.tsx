@@ -54,7 +54,6 @@ export default function Table({ title, items, setOption, api, setError, setId }:
       }
 
       setElements(items)
-      console.log(items)
     }
   }, [ items ])
 

@@ -2,24 +2,33 @@ import { useEffect, useState } from 'react'
 import Api from '../utils/api'
 import Table from './Table'
 import { Project } from '../types/Project'
+import PISForm from './PISForm'
 
 export default function PISPanel() {
   const api = new Api(import.meta.env.VITE_API_URI + '/impacto')
 
   const [ pis, setPis ] = useState<Project[]>([])
   const [ error, setError ] = useState('')
-  const [ , setId ] = useState('')
+  const [ id, setId ] = useState('')
   const [ option, setOption ] = useState('show')
 
-  useEffect(() => {
-    const getUsers = async () => {
-      const response = await api.get()
-      setPis((await response.json()).data)
-    }
+  const getPIS = async () => {
+    const response = await api.get()
+    setPis((await response.json()).data)
+  }
 
-    getUsers()
+  useEffect(() => {
+    getPIS()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if ( option === 'show' ) {
+      getPIS()
+      setId('')
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ option ])
 
   return (
     <>
@@ -40,9 +49,9 @@ export default function PISPanel() {
           />
         ) : (
           option === 'new' ? (
-            <p></p>
+            <PISForm setOption={ setOption } />
           ) : (
-            <p></p>
+            <PISForm setOption={ setOption } id={ id } />
           )
         )
       }

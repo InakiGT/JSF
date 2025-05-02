@@ -46,15 +46,15 @@ export default function UserForm({ setOption, id }: {
       }
       <div className='flex flex-col w-full'>
         <label htmlFor="nombre">Nombre:</label>
-        <input value={ user?.userName || '' } onChange={ e => setUser({ ...user, userName: e.target.value }) } name="userName" autoComplete='username' id="nombre" type="text" placeholder="Alumno UAM" className='border-b-1 border-b-gray-400 p-2' />
+        <input value={ user?.userName || '' } onChange={ e => setUser({ ...user, userName: e.target.value }) } name="userNamen" autoComplete='username' id="nombre" type="text" placeholder="Alumno UAM" className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>
         <label htmlFor="email">Correo:</label>
-        <input value={ user?.email || '' } onChange={ e => setUser({ ...user, email: e.target.value }) } autoComplete='new-email' name="email" id="email" type="email" placeholder="alumno@cua.uam.mx"  className='border-b-1 border-b-gray-400 p-2' />
+        <input value={ user?.email || '' } onChange={ e => setUser({ ...user, email: e.target.value }) } autoComplete='new-email' name="emailn" id="email" type="email" placeholder="alumno@cua.uam.mx"  className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>
         <label htmlFor="pass">Contraseña:</label>
-        <input value={ user?.password || '' } onChange={ e => setUser({ ...user, password: e.target.value }) } autoComplete='new-password' name="password" id="pass" type="password" placeholder="Contraseña" className='border-b-1 border-b-gray-400 p-2' />
+        <input value={ user?.password || '' } onChange={ e => setUser({ ...user, password: e.target.value }) } autoComplete='new-password' name="passwordn" id="pass" type="password" placeholder="Contraseña" className='border-b-1 border-b-gray-400 p-2' />
       </div>
 
       <button type="submit" className='bg-[var(--cua-orange)] text-white text-2xl py-2 font-bold w-40 rounded-lg mt-10'>{ id ? 'Actualizar' : 'Crear' }</button>

@@ -6,10 +6,10 @@ export type Project = {
   updatedAt?: Date,
   createdAt?: Date,
   img?: string,
-  content?: {
+  content?: [{
     creator?: string,
     content?: string,
     technologies?: string
     link?: string,
-  },
+  }],
 }

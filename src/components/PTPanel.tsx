@@ -12,15 +12,25 @@ export default function PTPanel() {
   const [ id, setId ] = useState('')
   const [ option, setOption ] = useState('show')
 
-  useEffect(() => {
-    const getUsers = async () => {
-      const response = await api.get()
-      setPts((await response.json()).data)
-    }
+  const getPT = async () => {
+    const response = await api.get()
+    setPts((await response.json()).data)
+  }
 
-    getUsers()
+  useEffect(() => {
+
+    getPT()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+
+  useEffect(() => {
+    if ( option === 'show' ) {
+      getPT()
+      setId('')
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ option ])
 
   return (
     <>
