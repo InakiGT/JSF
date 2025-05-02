@@ -26,7 +26,8 @@ class Api {
       })
 
       return response
-    } catch {
+    } catch (err) {
+      console.error(err)
       throw new Error('Error during the consult')
     }
   }
@@ -43,7 +44,8 @@ class Api {
       })
 
       return response
-    } catch {
+    } catch (err) {
+      console.error(err)
       throw new Error('Error during the consult')
     }
   }
@@ -60,7 +62,8 @@ class Api {
       })
 
       return response
-    } catch {
+    } catch (err) {
+      console.error(err)
       throw new Error('Error during the consult')
     }
   }
@@ -76,7 +79,8 @@ class Api {
       })
 
       return response
-    } catch {
+    } catch (err) {
+      console.error(err)
       throw new Error('Error during the consult')
     }
   }
