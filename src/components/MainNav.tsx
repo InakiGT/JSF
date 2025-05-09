@@ -20,7 +20,7 @@ function MainNav({ ref }: refType) {
 
   return (
     <nav
-      className={`bg-cua-orange fixed w-full z-50 transition-all duration-300 ease-in-out h-[178px] ${
+      className={`bg-cua-orange fixed w-full flex z-50 transition-all duration-300 ease-in-out h-[178px] ${
         isScrolled ? "lg:h-[80px] shadow-md" : "lg:h-[136px]"
       }`}
     >
@@ -42,12 +42,14 @@ function MainNav({ ref }: refType) {
 
           <h1
             className={`uppercase cursor-pointer text-white text-title transition-all duration-300 ease-in-out ${
-              isScrolled ? "text-xl xl:text-xl" : "text-xl xl:text-[28px]"
+              isScrolled ? "text-md xl:text-lg" : "text-xl xl:text-2xl"
             }`}
           >
             U<span className="hidden md:inline-block">niversidad </span>a
             <span className="hidden md:inline-block">utonoma </span>m
             <span className="hidden md:inline-block">etropolitana</span> - Cuajimalpa
+            <br />
+            <span className={`hidden md:block text-lg ${ isScrolled ? "text-md xl:text-sm" : "text-xl xl:text-md" }`}>Proyectos de alumnos y profesores de Ingeniería en Computación</span>
           </h1>
         </div>
 
