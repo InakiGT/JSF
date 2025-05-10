@@ -39,7 +39,7 @@ function Material({ ref }: refType) {
       title: 'Sistema de apoyo a “Calidad y Pruebas” (QualiTeam)',
       content: [
         { title: 'Qualiteam', content: 'QualiTeam es una aplicación web que ayuda al control de la documentación asociada a proyectos de desarrollo de software siguiendo los principios y procedimientos del aseguramiento de la calidad de la Ingeniería del Software.', link: 'http://qualiteam.cua.uam.mx:8080/QualiTeam/' },
-        { title: 'Libro de Texto', content: 'En el libro Calidad y Pruebas en el Desarrollo de Software, hay prácticas diseñadas para que con QualiTeam reafirmes los conceptos aprendidos en la teoría.', link: 'http://ilitia.cua.uam.mx:8080/jspui/handle/123456789/4,' }
+        { title: 'Libro de Texto', content: 'En el libro Calidad y Pruebas en el Desarrollo de Software, hay prácticas diseñadas para que con QualiTeam reafirmes los conceptos aprendidos en la teoría.', link: 'http://ilitia.cua.uam.mx:8080/jspui/' }
       ]
     },
     {
@@ -47,7 +47,7 @@ function Material({ ref }: refType) {
       title: 'Sistema Interactivo de Metodos Númericos (SIMetNum)',
       content: [
         { title: 'SIMetNum', content: 'SIMetNum es una herramienta didáctica que permite obtener rápidamente resultados, parciales y finales de los métodos numéricos que contiene. Su propósito es que los usuarios puedan ejecutar fácilmente diversos métodos numéricos y estudiar sus propiedades.', link: 'http://148.206.168.145:8080/SiMetNum/' },
-        { title: 'Libro de Texto', content: 'El libro Practicas con SIMetNum: Material de apoyo para la impartición de métodos numéricos, contiene una breve explicación de los métodos y prácticas diseñadas para ilustrar con SIMetNum propiedades clave de cada uno.', link: 'http://ilitia.cua.uam.mx:8080/jspui/handle/123456789/4,' },
+        { title: 'Libro de Texto', content: 'El libro Practicas con SIMetNum: Material de apoyo para la impartición de métodos numéricos, contiene una breve explicación de los métodos y prácticas diseñadas para ilustrar con SIMetNum propiedades clave de cada uno.', link: 'http://ilitia.cua.uam.mx:8080/jspui/' },
       ]
     },
     {
