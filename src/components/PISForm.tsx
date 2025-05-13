@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Api from '../utils/api'
 import { sendForm } from '../helpers/form'
 import { Project } from '../types/Project'
+import ImageForm from './ImageForm'
 
 export default function PISForm({ setOption, id }: {
   setOption: React.Dispatch<React.SetStateAction<string>>,
@@ -60,6 +61,9 @@ export default function PISForm({ setOption, id }: {
       <div className='flex flex-col w-full'>
         <label htmlFor="content-technologies">Stack de tecnologías:</label>
         <input value={ project?.content?.[0]?.technologies ?? '' } onChange={ e => setProject({ ...project, content: [{ ...project?.content?.[0], technologies: e.target.value} ]} ) } autoComplete='technologies' id="content-technologies" type="text" placeholder="React, NodeJS y MongoDB" className='border-b-1 border-b-gray-400 p-2' />
+      </div>
+      <div className='flex flex-col w-full'>
+        <ImageForm p={ project?.img } />
       </div>
       {
         error && (

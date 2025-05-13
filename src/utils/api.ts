@@ -32,7 +32,7 @@ class Api {
     }
   }
 
-  async post(endpoint: string, data: { [k: string]: FormDataEntryValue; }): Promise<Response> {
+  async post(endpoint: string, data: { [k: string]: FormDataEntryValue }): Promise<Response> {
     this.currentUrl = this.url + endpoint
     const token = await getToken()
 
@@ -41,6 +41,22 @@ class Api {
         method: 'POST',
         headers: headers(token ? token : { value: '' }),
         body: JSON.stringify({ ...data })
+      })
+
+      return response
+    } catch (err) {
+      console.error(err)
+      throw new Error('Error during the consult')
+    }
+  }
+
+  async postFormData(endpoint: string, data: FormData) {
+    this.currentUrl = this.url + endpoint
+
+    try {
+      const response = await fetch(this.currentUrl, {
+        method: 'POST',
+        body: data
       })
 
       return response
@@ -68,15 +84,17 @@ class Api {
     }
   }
 
-  async delete(endpoint: string): Promise<Response> {
+  async delete(endpoint: string, data: { [k: string]: string }): Promise<Response> {
     this.currentUrl = this.url + endpoint
     const token = await getToken()
 
     try {
       const response = await fetch(this.currentUrl, {
         method: 'DELETE',
-        headers: headers(token)
+        headers: headers(token),
+        body: JSON.stringify({ ...data })
       })
+
       return response
     } catch (err) {
       console.error(err)
