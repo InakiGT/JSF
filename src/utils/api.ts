@@ -84,7 +84,7 @@ class Api {
     }
   }
 
-  async delete(endpoint: string, data: { [k: string]: string }): Promise<Response> {
+  async delete(endpoint: string, data?: { [k: string]: string }): Promise<Response> {
     this.currentUrl = this.url + endpoint
     const token = await getToken()
 
