@@ -53,7 +53,7 @@ function Material({ ref }: refType) {
 
 
       <div className="max-w-6xl mx-auto">
-        <h2 ref={ ref } className="text-title text-4xl mx-auto w-80 uppercase leading-[36px] lg:w-full">Materiales - Cursos - Proyectos</h2>
+        <h2 ref={ ref } className="text-title text-4xl mx-auto w-80 uppercase leading-[36px] lg:w-full">Materiales de Apoyo</h2>
 
         <div className="flex items-center gap-2 justify-center my-5">
           <svg width="120" height="4" xmlns="http://www.w3.org/2000/svg">
