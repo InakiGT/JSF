@@ -52,7 +52,7 @@ export default function ImageForm({ p }: { p: string | undefined }) {
     <>
       <label htmlFor="image" className="cursor-pointer">Imagen:</label>
       <input hidden id="image" type="file" onChange={ createImage } />
-      <input readOnly name='imgo' type="text" placeholder='hola' value={ path } onChange={ () => setPath(path) } />
+      <input readOnly name='imgo' type="text" placeholder='Imagen URI' value={ path } onChange={ () => setPath(path) } />
       {
         image &&
         <span onClick={ removeImage } className="flex justify-end cursor-pointer">

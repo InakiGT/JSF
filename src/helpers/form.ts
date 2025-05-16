@@ -22,33 +22,30 @@ export const sendForm = async (
     return
   }
 
-  const data = entries.map(e => [e[0].split('').slice(0, -1).join(''), e[1]])
+  const data = entries
+    .map(e => [e[0].split('').slice(0, -1).join(''), e[1]]) as [string, FormDataEntryValue][]
 
-  const regex = /content\[0\]\.(\w*)/;
+  const regex = /content\[(\d+)\]\.(\w*)/
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let newData: { [key: string]: any } = { content: [{}] }
+  const newData: { [key: string]: any } = { content: [] }
 
   data.forEach(e => {
-      const match = regex.exec(e[0] as string);
-      let key = e[0] as string;
-      let value: unknown = e[1]
+    const match = regex.exec(e[0] as string)
 
-      if (match) {
-          key = 'content'
+    if (match) {
+      const index = parseInt(match[1], 10)
+      const field = match[2]
+      const value = e[1]
 
-          const contentObj = newData.content[0] || {}
-          value = [{
-            ...contentObj,
-            [match[1]]: e[1],
-          }];
+      if (!newData.content[index]) {
+        newData.content[index] = {}
       }
 
-      newData = {
-        ...newData,
-        [key]: value,
-      }
+      newData.content[index][field] = value
+    } else {
+      newData[e[0]] = e[1];
+    }
   })
-
 
   const response = await api[id ? 'patch' : 'post'](`/${ id ? id : '' }`, newData as { [k: string]: FormDataEntryValue; })
   if ( response.status === 201 || response.status === 200 || response.status === 204) {

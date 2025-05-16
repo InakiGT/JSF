@@ -74,7 +74,7 @@ export default function PISForm({ setOption, id }: {
       <input type="hidden" name="content[0].creatorn" value={project?.content?.[0]?.creator ?? ''} />
       <input type="hidden" name="content[0].linko" value={project?.content?.[0]?.link ?? ''} />
       <input type="hidden" name="content[0].technologieso" value={project?.content?.[0]?.technologies ?? ''} />
-      <button type="submit" className='bg-[var(--cua-orange)] text-white text-2xl py-2 font-bold w-40 rounded-lg mt-10'>{ id ? 'Actualizar' : 'Crear' }</button>
+      <button type="submit" className='bg-[var(--cua-orange)] text-white text-2xl py-2 font-bold w-40 rounded-lg mt-10 cursor-pointer'>{ id ? 'Actualizar' : 'Crear' }</button>
     </form>
     </aside>
   )

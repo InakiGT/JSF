@@ -52,7 +52,7 @@ function ProyectosImpactoSocial() {
       />
 
       <section className="pt-60 md:pt-40 max-w-6xl mx-auto min-h-[80vh]">
-        <h2 className="text-title text-4xl mx-auto w-80 uppercase leading-[36px] lg:w-full">Proyectos</h2>
+        <h2 className="text-title text-4xl mx-auto w-80 uppercase leading-[36px] lg:w-full">Proyectos de Impacto Social</h2>
 
         <div className="flex items-center gap-2 justify-center my-5">
           <svg width="120" height="4" xmlns="http://www.w3.org/2000/svg">

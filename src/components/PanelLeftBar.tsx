@@ -10,9 +10,7 @@ export default function PanelLeftBar({ setJwt, setSelected, selected }: {
     setJwt('')
   }
 
-  const isSelected = (li: string) => {
-    return selected === li ? 'border-b-white border-b-1' : ''
-  }
+  const isSelected = (li: string) => selected === li ? 'border-b-white border-b-1' : ''
 
   return (
     <nav>
@@ -21,6 +19,7 @@ export default function PanelLeftBar({ setJwt, setSelected, selected }: {
           <li onClick={ () => setSelected('usuarios') } className={`cursor-pointer ${ isSelected('usuarios') }`}>Usuarios</li>
           <li onClick={ () => setSelected('pts') } className={`cursor-pointer ${ isSelected('pts') }`}>Proyectos de titulación</li>
           <li onClick={ () => setSelected('pis') } className={`cursor-pointer ${ isSelected('pis') }`}>Proyectos de impacto social</li>
+          <li onClick={ () => setSelected('material') } className={`cursor-pointer ${ isSelected('material') }`}>Materiales, cursos y proyectos</li>
         </div>
         <li className="cursor-pointer" onClick={ logout }>Cerrar sesión</li>
       </ul>

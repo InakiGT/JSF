@@ -3,6 +3,7 @@ import PanelLeftBar from "./PanelLeftBar"
 import Users from "./Users";
 import PISPanel from "./PISPanel";
 import PTPanel from "./PTPanel";
+import MaterialPanel from "./MaterialPanel";
 
 export default function Panel({ setJwt }: {
   setJwt: React.Dispatch<React.SetStateAction<string>>
@@ -18,9 +19,11 @@ export default function Panel({ setJwt }: {
             <Users />
           ) : ( selected === 'pis' ? (
             <PISPanel />
+          ) : ( selected === 'material' ? (
+            <MaterialPanel />
           ) :
             <PTPanel />
-          )
+          ))
         }
 
       </aside>

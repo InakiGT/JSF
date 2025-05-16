@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
-import { User } from '../types/User'
+import {type  User } from '../types/User'
 import Api from '../utils/api'
-import { Project } from '../types/Project'
+import { type Project } from '../types/Project'
+import { type Material } from '../types/Material'
 
 type setStateType = React.Dispatch<React.SetStateAction<string>>
 type SafeItem = Record<string, string | number | undefined>
 
 export default function Table({ title, items, setOption, api, setError, setId }: {
   title: string,
-  items: User[] | Project[],
+  items: User[] | Project[] | Material[],
   setOption: setStateType,
   api: Api,
   setError: setStateType,
@@ -22,8 +23,6 @@ export default function Table({ title, items, setOption, api, setError, setId }:
     if ( elements[0] ) {
       const ks = { ...elements[0] }
       delete ks.__v
-      delete ks.updatedAt
-      delete ks.createdAt
       delete ks._id
 
       if ( 'password' in ks ) {
@@ -32,6 +31,11 @@ export default function Table({ title, items, setOption, api, setError, setId }:
 
       if ( 'content' in ks ) {
         delete ks.content
+      }
+
+      if ( 'updatedAt' in ks ) {
+        delete ks.updatedAt
+        delete ks.createdAt
       }
 
       setKeys(ks)
@@ -42,8 +46,6 @@ export default function Table({ title, items, setOption, api, setError, setId }:
     if ( items[0]) {
       const ks = { ...items[0] }
       delete ks.__v
-      delete ks.updatedAt
-      delete ks.createdAt
       delete ks._id
       if ( 'password' in ks ) {
         delete ks.password
@@ -51,6 +53,11 @@ export default function Table({ title, items, setOption, api, setError, setId }:
 
       if ( 'content' in ks ) {
         delete ks.content
+      }
+
+      if ( 'updatedAt' in ks ) {
+        delete ks.updatedAt
+        delete ks.createdAt
       }
 
       setElements(items)
