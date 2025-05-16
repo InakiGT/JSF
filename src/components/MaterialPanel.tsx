@@ -40,7 +40,7 @@ export default function MaterialPanel() {
       {
         option === 'show' ? (
           <Table
-            title='Materiales, cursos y proyectos'
+            title='Materiales de apoyo'
             items={ materials }
             setOption={ setOption }
             api={ api }

@@ -19,7 +19,7 @@ export default function PanelLeftBar({ setJwt, setSelected, selected }: {
           <li onClick={ () => setSelected('usuarios') } className={`cursor-pointer ${ isSelected('usuarios') }`}>Usuarios</li>
           <li onClick={ () => setSelected('pts') } className={`cursor-pointer ${ isSelected('pts') }`}>Proyectos de titulación</li>
           <li onClick={ () => setSelected('pis') } className={`cursor-pointer ${ isSelected('pis') }`}>Proyectos de impacto social</li>
-          <li onClick={ () => setSelected('material') } className={`cursor-pointer ${ isSelected('material') }`}>Materiales, cursos y proyectos</li>
+          <li onClick={ () => setSelected('material') } className={`cursor-pointer ${ isSelected('material') }`}>Materiales de apoyo</li>
         </div>
         <li className="cursor-pointer" onClick={ logout }>Cerrar sesión</li>
       </ul>
