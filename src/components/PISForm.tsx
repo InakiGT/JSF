@@ -39,7 +39,7 @@ export default function PISForm({ setOption, id }: {
     <form onSubmit={ e =>  sendForm(e, api, setOption, setError, id)} className="bg-[#f5f5f5] p-10 flex flex-col items-center text-2xl gap-5 rounded-lg drop-shadow-lg h-[80vh] overflow-scroll">
       <h1 className='text-center text-4xl font-bold mb-5'>{ id ? 'Actualizar' : 'Crear' } Proyecto de Impacto Social</h1>
       <div className='flex flex-col w-full'>
-        <label htmlFor="title">Título del proyecto:</label>
+        <label htmlFor="title">*Título del proyecto:</label>
         <input value={ project?.title || '' } onChange={ e => setProject({ ...project, title: e.target.value }) } name="titlen" autoComplete='title' id="title" type="text" placeholder="Proyecto" className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>
@@ -47,11 +47,11 @@ export default function PISForm({ setOption, id }: {
         <input value={ project?.subtitle || '' } onChange={ e => setProject({ ...project, subtitle: e.target.value }) } name="subtitleo" autoComplete='subtitle' id="subtitle" type="text" placeholder="Proyecto UAM" className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>
-        <label htmlFor="content-content">Descripción:</label>
+        <label htmlFor="content-content">*Descripción:</label>
         <textarea value={project?.content?.[0]?.content ?? ''} onChange={ e => setProject({ ...project, content: [{ ...project?.content?.[0], content: e.target.value }]}) } autoComplete='content-content' id="content-content" placeholder="Un proyecto"  className='border-b-1 border-b-gray-400 p-2 resize-none' ></textarea>
       </div>
       <div className='flex flex-col w-full'>
-        <label htmlFor="content-creator">Autor:</label>
+        <label htmlFor="content-creator">*Autor:</label>
         <input value={ project?.content?.[0]?.creator ?? '' } onChange={ e => setProject({ ...project, content: [{ ...project?.content?.[0], creator: e.target.value}] } ) } autoComplete='new-password' id="content-creator" type="text" placeholder="John Doe" className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>

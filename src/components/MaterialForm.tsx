@@ -75,7 +75,7 @@ export default function MaterialForm({ setOption, id }: {
     <form onSubmit={ e =>  sendForm(e, api, setOption, setError, id)} className="bg-[#f5f5f5] p-10 flex flex-col items-center text-2xl gap-5 rounded-lg drop-shadow-lg h-[80vh] overflow-scroll">
       <h1 className='text-center text-4xl font-bold mb-5'>{ id ? 'Actualizar' : 'Crear' } Material</h1>
       <div className='flex flex-col w-full'>
-        <label htmlFor="title">Título del material:</label>
+        <label htmlFor="title">* Título del material:</label>
         <input value={ project?.title || '' } onChange={ e => setProject({ ...project, title: e.target.value }) } name="titlen" autoComplete='title' id="title" type="text" placeholder="Proyecto" className='border-b-1 border-b-gray-400 p-2' />
       </div>
       <div className='flex flex-col w-full'>
@@ -144,7 +144,7 @@ export default function MaterialForm({ setOption, id }: {
       {
         (Array.from({ length: contentCount + 1 }, (_, i) => i)).map(i => (
         <div key={ i }>
-          <input type="hidden" name={`content[${i}].contentn`} value={project?.content?.[i]?.content ?? ''} />
+          <input type="hidden" name={`content[${i}].contento`} value={project?.content?.[i]?.content ?? ''} />
           <input type="hidden" name={`content[${i}].titleo`} value={project?.content?.[i]?.title ?? ''} />
           <input type="hidden" name={`content[${i}].linko`} value={project?.content?.[i]?.link ?? ''} />
         </div>
