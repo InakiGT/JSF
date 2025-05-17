@@ -53,7 +53,7 @@ function MainNav({ ref }: refType) {
           </h1>
         </div>
 
-        <MenuHamburguer isScrolled={ isScrolled } ref={ ref } />
+        <MenuHamburguer />
       </div>
     </nav>
   )

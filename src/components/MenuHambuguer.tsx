@@ -1,8 +1,7 @@
-import { RefObject, useState } from 'react'
-import { scrollToRef } from '../helpers/scroll'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObject<HTMLDivElement | null> }) {
+function MenuHamburguer() {
   const [menu, setMenu] = useState(false)
 
   return (
@@ -35,18 +34,6 @@ function MenuHamburguer({ isScrolled, ref }: { isScrolled: boolean, ref: RefObje
           className="hidden text-white font-extrabold text-md uppercase hover:text-black cursor-pointer text-center bg-[#ff9900] w-full lg:block"
           to="/panel"
         >Iniciar sesión</Link>
-        <span
-          className={`text-title py-5 w-full absolute left-0 bottom-[-30px] flex px-4 text-left text-white hover:text-black cursor-pointer uppercase xl:static xl:block xl:px-0 transition-transform duration-300 transform origin-top ${
-            menu ? "scale-y-100" : "scale-y-0"
-          } xl:scale-y-100 ${
-            isScrolled
-              ? "bg-[#ff9900] lg:bg-[#555555] lg:w-[300px] lg:rounded-md lg:py-4 ml-2"
-              : "bg-[#ff9900] lg:w-[200px] lg:rounded-lg"
-          }`}
-          onClick={ () => scrollToRef(ref) }
-        >
-          Ingeniería en computación
-        </span>
       </div>
     </div>
   )

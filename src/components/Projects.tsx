@@ -47,7 +47,7 @@ function Projects({ ref }: refType) {
       const response = await api.get('/pt')
       const data = await response.json()
 
-      setProjects([ ...data.data ])
+      setProjects([ ...data.data ].reverse())
     }
 
     fetchData()
