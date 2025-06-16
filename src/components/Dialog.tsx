@@ -47,7 +47,7 @@ function Dialog({ title, subtitle, content, kind, modalRef }: DialogType) {
               <div className="p-6">
                 { item.title && (<h4 className="text-title text-2xl mb-5">{ item.title }</h4>) }
                 { item.technologies && (<h4 className="text-title text-s mb-5">Stack: { item.technologies }</h4>) }
-                <p className='text-center'>{ item.content }</p>
+                <p className='text-center whitespace-pre-line'>{ item.content }</p>
                 {
                   item.perks && (
                   <ul className="mt-5 text-sm">
