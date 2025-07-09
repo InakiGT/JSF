@@ -5,9 +5,9 @@ function MenuHamburguer() {
   const [menu, setMenu] = useState(false)
 
   return (
-    <div className="flex flex-col justify-start items-start gap-4 xl:flex-row xl:gap-2.5">
+    <div className="w-full flex flex-col justify-start items-start xl:flex-row xl:gap-2.5 bg-[#ff9900] px-4 lg:w-fit">
       <button
-        className="cursor-pointer uppercase text-[rgb(230,203,176)] bg-[rgb(89,63,36)] text-title flex items-center justify-center rounded-md p-3 xl:hidden"
+        className="cursor-pointer uppercase text-[rgb(230,203,176)] bg-[rgb(89,63,36)] text-title flex items-center justify-center rounded-md p-3 lg:hidden"
         onClick={() => setMenu(!menu)}
       >
         Menu
@@ -28,17 +28,12 @@ function MenuHamburguer() {
           />
         </svg>
       </button>
-
-      {
-        menu && (
-        <div className='border-none flex items-center w-full bg-[#ff9900] max-h-10'>
-          <Link
-            className="hidden text-white font-extrabold text-md uppercase hover:text-black cursor-pointer text-center bg-[#ff9900] w-full lg:block"
-            to="/panel"
-          >Iniciar sesión</Link>
-        </div>
-        )
-      }
+      <div className='border-none flex items-center w-full'>
+        <Link
+          className={`${ !menu ? 'hidden' : 'block' } py-2 text-white font-extrabold text-md uppercase hover:text-black cursor-pointer text-center w-full lg:pt-0 lg:block`}
+          to="/panel"
+        >Iniciar sesión</Link>
+      </div>
     </div>
   )
 }

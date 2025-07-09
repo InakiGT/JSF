@@ -25,12 +25,12 @@ function MainNav({ ref }: refType) {
       }`}
     >
       <div
-        className={`py-6  max-w-full md:max-w-7xl mx-auto gap-2 p-4 w-full flex flex-col xl:flex-row md:justify-between xl:items-center relative transition-all duration-300 ease-in-out ${
+        className={`py-6  max-w-full md:max-w-7xl mx-auto gap-2 w-full flex flex-col xl:flex-row md:justify-between xl:items-center relative transition-all duration-300 ease-in-out ${
           isScrolled ? "lg:py-3" : "lg:py-6"
         }`}
       >
         <div
-          className="flex flex-col gap-1 md:items-center md:flex-row md:gap-2.5"
+          className="flex flex-col gap-1 md:items-center md:flex-row md:gap-2.5 px-4"
           onClick={() => scrollToRef(ref)}
         >
           <img
