@@ -29,12 +29,16 @@ function MenuHamburguer() {
         </svg>
       </button>
 
-      <div className='border-none flex items-center w-full bg-[#ff9900] max-h-10'>
-        <Link
-          className="hidden text-white font-extrabold text-md uppercase hover:text-black cursor-pointer text-center bg-[#ff9900] w-full lg:block"
-          to="/panel"
-        >Iniciar sesión</Link>
-      </div>
+      {
+        menu && (
+        <div className='border-none flex items-center w-full bg-[#ff9900] max-h-10'>
+          <Link
+            className="hidden text-white font-extrabold text-md uppercase hover:text-black cursor-pointer text-center bg-[#ff9900] w-full lg:block"
+            to="/panel"
+          >Iniciar sesión</Link>
+        </div>
+        )
+      }
     </div>
   )
 }
